@@ -15,28 +15,28 @@ namespace First_Lab
 
             Console.WriteLine("Периметр Прямоугольника: " + 
                 PerimeterOfRectangle(A, B));
-            Console.ReadKey();
+            Console.WriteLine();
 
             // Второе Задание 
             Console.WriteLine("Введите число: ");
             Console.WriteLine("Длинна окружности(Круга)" + LenghtOfCircle(Convert.ToDouble(Console.ReadLine())));
-            Console.ReadKey();
+            Console.WriteLine();
 
             // Третье задание
             Console.WriteLine("Введите два числа(через Enter): ");
-            Console.WriteLine("Среднее арифметическое двух чисел" +
+            Console.WriteLine("Среднее арифметическое двух чисел: " +
                 ArithmeticMeanOfTwoNumbers(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine())));
-            Console.ReadKey();
+            Console.WriteLine();
 
             //Четвёртое задние
             Console.WriteLine("Введите два числа(через Enter): ");
             FourthTask(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
-            Console.ReadKey();
+            Console.WriteLine();
 
             //Пятое задние
             Console.WriteLine("Введите два числа(через Enter): ");
             FithTask(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
-            Console.ReadKey();
+            Console.WriteLine();
         }
 
         private static double AreaOfRectangleArea(double A, double B) => A * B;
