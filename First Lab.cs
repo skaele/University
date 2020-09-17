@@ -60,7 +60,6 @@ namespace First_Lab
 
         private static void FourthTask(double A, double B)
         {
-
             double a = A * A;
             double b = B * B;
 
