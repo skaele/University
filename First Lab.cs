@@ -1,96 +1,73 @@
 ﻿using System;
 
-namespace Univ
+namespace First_Lab
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Первое задание
-            Console.WriteLine(AreaOfRectangleArea(2.7, 19.4)); 
-            Console.WriteLine(PerimeterOfRectangle(100.7, 15));
+            Console.WriteLine("Введите два числа(через Enter): ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            double B = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Плошадь Прямоугольника: " +
+                AreaOfRectangleArea(A, B));
+
+            Console.WriteLine("Периметр Прямоугольника: " + 
+                PerimeterOfRectangle(A, B));
             Console.ReadKey();
 
             // Второе Задание 
-            Console.WriteLine(LenghtOfCircle(100.32133));
+            Console.WriteLine("Введите число: ");
+            Console.WriteLine("Длинна окружности(Круга)" + LenghtOfCircle(Convert.ToDouble(Console.ReadLine())));
             Console.ReadKey();
 
             // Третье задание
-            Console.WriteLine(ArithmeticMeanOfTwoNumbers(1023100, 12313.232));
+            Console.WriteLine("Введите два числа(через Enter): ");
+            Console.WriteLine("Среднее арифметическое двух чисел" +
+                ArithmeticMeanOfTwoNumbers(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine())));
             Console.ReadKey();
 
             //Четвёртое задние
-            FourthTask(1232131, 1313.2);
+            Console.WriteLine("Введите два числа(через Enter): ");
+            FourthTask(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
             Console.ReadKey();
 
             //Пятое задние
-            FithTask(1232, 131233.2);
+            Console.WriteLine("Введите два числа(через Enter): ");
+            FithTask(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
             Console.ReadKey();
         }
 
-        /// <summary>
-        /// Площадь прямоугольника
-        /// </summary>
-        /// <param name="A"></param>
-        /// <param name="B"></param>
-        /// <returns></returns>
         private static double AreaOfRectangleArea(double A, double B) => A * B;
 
-        /// <summary>
-        ///  Периметр прямоугольника
-        /// </summary>
-        /// <param name="A"></param>
-        /// <param name="B"></param>
-        /// <returns></returns>
         private static double PerimeterOfRectangle(double A, double B) => 2 * (A + B);
 
-        /// <summary>
-        /// Длинна окружности по диаметру, где pi = 3.14 
-        /// </summary>
-        /// <param name="D"></param>
-        /// <returns></returns>
         private static double LenghtOfCircle(double D) => D * 3.14;
 
-        /// <summary>
-        /// Среднее арифмитическое двух чисел
-        /// </summary>
-        /// <param name="A"></param>
-        /// <param name="B"></param>
-        /// <returns></returns>
         private static double ArithmeticMeanOfTwoNumbers(double A, double B) => (A * B) / 2;
 
-
-        /// <summary>
-        /// Четвёртое задание
-        /// </summary>
-        /// <param name="A"></param>
-        /// <param name="B"></param>
         private static void FithTask(double A, double B)
         {
             double a = Math.Abs(A);
             double b = Math.Abs(B);
 
-            Console.WriteLine(a + b);
-            Console.WriteLine(a - b);
-            Console.WriteLine(a * b);
-            Console.WriteLine(a/b);
+            Console.WriteLine("Сумма модулей: " + (a + b));
+            Console.WriteLine("Разность модулей: " + (a - b));
+            Console.WriteLine("Произведение модулей: " + (a * b));
+            Console.WriteLine("Частное двух модулей: " + (a / b));
         }
 
-        /// <summary>
-        /// Пятон задание
-        /// </summary>
-        /// <param name="A"></param>
-        /// <param name="B"></param>
-        private static void FourthTask(double A, double B) 
+        private static void FourthTask(double A, double B)
         {
 
             double a = A * A;
             double b = B * B;
 
-            Console.WriteLine(a + b);
-            Console.WriteLine(a - b);
-            Console.WriteLine(a * b);
-            Console.WriteLine(a / b);
+            Console.WriteLine("Сумма квадратов: " + (a + b));
+            Console.WriteLine("Разность квадратов: " + (a - b));
+            Console.WriteLine("Произведение квадратов: " + (a * b));
+            Console.WriteLine("Частное двух квадратов: " + (a / b));
         }
 
 
