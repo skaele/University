@@ -61,7 +61,19 @@ namespace Fifteenth_lab
           
         }
 
-        private static int[] First(int[] arr) => new HashSet<int>(arr).ToArray();
+        private static int[] First(int[] arr) 
+        {
+            List<int> outputarr = new List<int>();
+            outputarr.Add(arr[0]);
+            for(int i = 1; i < arr.Length; i++) 
+            {
+                if(arr[i-1] != arr[i]) 
+                {
+                    outputarr.Add(arr[i]);
+                }
+            }
+            return outputarr.ToArray();
+        }
         
         private static int[] Second(int[] arr)
         {
