@@ -28,7 +28,7 @@ namespace Sixth_Lab
 
             // Третье задание
             Console.WriteLine("Введите День в году, День недели когда был новый год (Через Enter): ");
-            Third(Convert.ToInt32(Console.ReadLine()), EnumElementIndexByName(Console.ReadLine()));
+            Third(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine();
 
             // Четвёртое задание
@@ -45,19 +45,6 @@ namespace Sixth_Lab
 
         }
 
-        private static int EnumElementIndexByName(string Day) 
-        {
-            var arr = Enum.GetNames(typeof(DaysOfWeek));
-            for(int index = 0; index < arr.Length; index++)
-            {
-                if(arr[index].ToLower() == Day.ToLower().Replace(" ", ""))
-                {
-                    return index;
-                }
-            }
-            return -1;
-        }
-
         private static void First(int Seconds) 
         {
             Console.WriteLine("Количество секунд, прошедших с начала последней минуты: " + Seconds % 60);
@@ -70,7 +57,7 @@ namespace Sixth_Lab
 
         private static void Third(int Days, int StartDay)
         {
-            if (StartDay == -1) Console.WriteLine("Введён несуществующий день недели!!!");
+            if (StartDay < 1 || StartDay > 7) Console.WriteLine("Введён несуществующий день недели!!!");
             else Console.WriteLine("День недели: " + (DaysOfWeek)((Days + StartDay - 2) % 7 + 1));
         }
 
