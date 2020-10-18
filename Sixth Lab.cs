@@ -58,7 +58,7 @@ namespace Sixth_Lab
         private static void Third(int Days, int StartDay)
         {
             if (StartDay < 1 || StartDay > 7) Console.WriteLine("Введён несуществующий день недели!!!");
-            else Console.WriteLine("День недели: " + (DaysOfWeek)((Days + StartDay - 2) % 7 + 1));
+            else Console.WriteLine("День недели: " + ((Days + StartDay - 2) % 7 + 1));
         }
 
         private static void Fourth(int A, int B, int C)
